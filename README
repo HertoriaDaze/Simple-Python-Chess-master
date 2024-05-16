@@ -1,3 +1,10 @@
 Simple Python Chess Master
-    To be supplemented
-    11111
+-------------------
+
+A simple Python chess implementation for learning projects.
+
+Requirements:
+    * Python 3.0+
+
+TODO:
+    * Partial functions not completed
