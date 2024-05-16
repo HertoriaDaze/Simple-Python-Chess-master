@@ -38,16 +38,17 @@ class BoardGuiConsole(object):
         self.move()
 
     def unicode_representation(self):
-        print "\n", ("%s's turn\n" % self.board.player_turn.capitalize()).center(28)
+        print("\n", ("%s's turn\n" % self.board.player_turn.capitalize()).center(28))
         for number in self.board.axis_x[::-1]:
-            print " " + str(number) + " ",
+            print(" " + str(number) + " ", end=' ')
             for letter in self.board.axis_y:
-                piece = self.board[letter+str(number)]
+                piece = self.board[letter + str(number)]
                 if piece is not None:
-                    print UNICODE_PIECES[piece.abbriviation] + ' ',
-                else: print '  ',
-            print "\n"
-        print "    " + "  ".join(self.board.axis_y)
+                    print(UNICODE_PIECES[piece.abbriviation] + ' ', end=' ')
+                else:
+                    print('  ', end=' ')
+            print("\n")
+        print("    " + "  ".join(self.board.axis_y))
 
 
 def display(board):
