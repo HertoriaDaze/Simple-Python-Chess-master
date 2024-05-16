@@ -160,10 +160,9 @@ class Board(dict):
     def is_king(self, piece):
         return isinstance(piece, pieces.King)
 
-
-    def get_king_position(self):
+    def get_king_position(self, color):
         for pos in self.keys():
-            if self.is_king(self[pos]):
+            if self.is_king(self[pos]) and self[pos].color == color:
                 return pos
 
     def get_king(self, color):
